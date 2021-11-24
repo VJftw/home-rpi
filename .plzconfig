@@ -6,4 +6,7 @@
 ; Or you can uncomment the following to pin everyone to a particular version;
 ; when you change it all users will automatically get updated.
 [please]
-version = 16.0.1
+version = 16.14.0
+
+[go]
+gotool = //third_party/go:toolchain|go

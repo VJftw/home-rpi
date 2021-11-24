@@ -4,6 +4,26 @@
 
  * K3s on a Raspberry Pi (K3d for local/integration-testing)
 
+## Raspberry Pi 4 8GB Setup
+ARCH=armhf
+
+* Raspberry Pi OS Lite
+* Enable SSH
+
+### K3s 
+1. add `cgroup_memory=1 cgroup_enable=memory` to `/boot/cmdline.txt`.
+2. add `arm_64bit=1` to the end of `/boot/config.txt`.
+3. ```bash
+curl -LO https://raw.githubusercontent.com/VJftw/vjpatel.me/master/deployment/scaleway-dev/k3s/k3s.sh
+TODO: ^ fix above script to resolve arch and add krew installation
+chmod +x k3s.sh
+./k3s.sh \
+  k3s.vjpatel.me \
+  https://vjpatel.eu.auth0.com/ \
+  PT1R4dJdij9LqJWJI3a3i1VcIcFXy5Lj \
+  vj@vjpatel.me
+```
+
 
 # TODO
 
